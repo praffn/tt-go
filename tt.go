@@ -39,6 +39,14 @@ func main() {
 				return nil
 			},
 		},
+		{
+			Name:  "list",
+			Usage: "lists all entries for all jobs",
+			Action: func(c *cli.Context) error {
+				trat.List(db)
+				return nil
+			},
+		},
 	}
 
 	app.Run(os.Args)
