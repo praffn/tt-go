@@ -27,7 +27,7 @@ func main() {
 			Name:  "start",
 			Usage: "start timer for given job",
 			Action: func(c *cli.Context) error {
-				trat.Start(db, "doro", "", "")
+				trat.Start(db, c.Args().First(), "", "")
 				return nil
 			},
 		},
@@ -35,7 +35,7 @@ func main() {
 			Name:  "stop",
 			Usage: "stop timer for given job",
 			Action: func(c *cli.Context) error {
-				trat.Stop(db, "doro", "", "")
+				trat.Stop(db, c.Args().First(), "", "")
 				return nil
 			},
 		},
